@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Video Page</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            font-family: Arial, sans-serif;
+            background: #f9f9f9;
+        }
+        .video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 40vh;
+            z-index: 10;
+            overflow: hidden;
+        }
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .content-wrapper {
+            position: relative;
+            top: 40vh;
+            z-index: 5;
+        }
+        .animal-section {
+            padding: 20px;
+            background: #fff;
+            margin: 10px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .animal-section h2 {
+            margin-top: 0;
+        }
+
+        @media screen and (max-width: 768px) {
+            .video-container {
+                height: 30vh;
+            }
+            .content-wrapper {
+                top: 30vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="video-container">
+        <video autoplay muted playsinline>
+            <source src="video/sample.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="content-wrapper">
+        <div class="animal-section">
+            <h2>Mammals</h2>
+            <p>Lions, Tigers, Elephants, and more. Mammals are warm-blooded animals with fur or hair...</p>
+        </div>
+        <div class="animal-section">
+            <h2>Birds</h2>
+            <p>Parrots, Eagles, and Sparrows. Birds have feathers and most can fly...</p>
+        </div>
+        <div class="animal-section">
+            <h2>Reptiles</h2>
+            <p>Snakes, Lizards, Turtles. Reptiles are cold-blooded and usually lay eggs...</p>
+        </div>
+        <div class="animal-section">
+            <h2>Amphibians</h2>
+            <p>Frogs, Toads, Salamanders. Amphibians live both in water and on land...</p>
+        </div>
+        <div class="animal-section">
+            <h2>Fish</h2>
+            <p>Goldfish, Sharks, Tuna. Fish live in water and breathe using gills...</p>
+        </div>
+    </div>
+</body>
+</html>
